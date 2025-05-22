@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Festejando a Conexão entre o Campo e a Cidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="title">Festejando a Conexão</h1>
+      <p class="subtitle">
+        Celebrando a harmonia, cultura e inovação que unem o rural e o urbano.<br />
+        Descubra como o campo e a cidade se conectam para construir um futuro sustentável e próspero para todos.
+      </p>
+      <nav class="nav-bar">
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#eventos" class="nav-link">Eventos</a>
+        <a href="#galeria" class="nav-link">Galeria</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section id="sobre" class="section section-about">
+      <h2 class="section-title">Sobre a Conexão</h2>
+      <p class="section-text">
+        Nosso objetivo é fortalecer a relação entre o campo e a cidade, promovendo eventos, trocas culturais e
+        inovações que valorizam a agricultura sustentável e o desenvolvimento urbano consciente.
+      </p>
+      <p class="section-text">
+        Através de parcerias e iniciativas colaborativas, buscamos integrar comunidades, estimular a economia local e preservar o meio ambiente.
+      </p>
+    </section>
+
+    <section id="eventos" class="section section-events">
+      <h2 class="section-title">Próximos Eventos</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Feira agrícola" loading="lazy" />
+          <div class="card-content">
+            <h3>Feira Agro Urbana 2025</h3>
+            <p>Uma feira que reúne produtores rurais e consumidores urbanos para celebrar alimentos frescos e locais.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=80" alt="Palestra sobre sustentabilidade" loading="lazy" />
+          <div class="card-content">
+            <h3>Palestra: Sustentabilidade e Inovação</h3>
+            <p>Discussões sobre práticas agrícolas sustentáveis e tecnologias que conectam o campo à cidade.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=600&q=80" alt="Colheita" loading="lazy" />
+          <div class="card-content">
+            <h3>Festival da Colheita</h3>
+            <p>Evento cultural que celebra a colheita com música, gastronomia e atividades para toda a família.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeria" class="section section-gallery">
+      <h2 class="section-title">Galeria de Fotos</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80" alt="Campo verde" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&q=80" alt="Plantações" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Trator no campo" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=400&q=80" alt="Colheita" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80" alt="Agricultor" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&q=80" alt="Produtos frescos" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="contato" class="section section-contact">
+      <h2 class="section-title">Contato</h2>
+      <form class="contact-form" novalidate>
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+
+        <button type="submit" class="btn-submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2025 Festejando a Conexão. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll suave para âncoras
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Validação simples do formulário
+    document.querySelector('.contact-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Mensagem enviada! Obrigado pelo contato.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
